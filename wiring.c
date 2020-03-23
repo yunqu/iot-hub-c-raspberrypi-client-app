@@ -17,12 +17,15 @@ int readMessage(int messageId, char *payload)
     float temperature = random(20, 30);
     snprintf(payload,
              BUFFER_SIZE,
-             "{ \"deviceId\": \"Raspberry Pi - C\", \"messageId\": %d, \"temperature\": %f, \"humidity\": %f }",
+             "{ \"deviceId\": \"PYNQ Ultra96\", \"messageId\": %d, \"temperature\": %f, \"humidity\": %f }",
              messageId,
              temperature,
              random(60, 80));
     return (temperature > TEMPERATURE_ALERT) ? 1 : 0;
 }
+
+void blinkLED() {}
+void setupWiring(){}
 
 #else
 int mask_check(int check, int mask)
@@ -80,7 +83,7 @@ int readMessage(int messageId, char *payload)
              humidity);
     return temperature > TEMPERATURE_ALERT ? 1 : 0;
 }
-#endif
+
 
 void blinkLED()
 {
@@ -97,3 +100,4 @@ void setupWiring()
     }
     pinMode(LED_PIN, OUTPUT);
 }
+#endif

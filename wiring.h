@@ -7,8 +7,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <wiringPi.h>
-#include <wiringPiSPI.h>
+// #include <wiringPi.h>
+// #include <wiringPiSPI.h>
 
 #include "./config.h"
 

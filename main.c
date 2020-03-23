@@ -20,6 +20,8 @@
 #include "./wiring.h"
 #include "./telemetry.h"
 
+#define delay sleep
+
 const char *onSuccess = "\"Successfully invoke device method\"";
 const char *notFound = "\"No method found\"";
 
